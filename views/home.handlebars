@@ -1,0 +1,18 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Pages</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each books as |book|}}
+            <tr>
+                <td>{{book.title}}</td>
+                <td>{{book.pages}}</td>
+                <td>{{book.price}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

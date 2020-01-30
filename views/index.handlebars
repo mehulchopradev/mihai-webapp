@@ -1,14 +1,19 @@
-<form action="">
+<form action="/auth" method="POST">
     <p>
-        <input type="text" placeholder="Enter username">
+        <input type="text" name="username" placeholder="Enter username">
     </p>
     <p>
-        <input type="password" placeholder="Enter password">
+        <input type="password" name="password" placeholder="Enter password">
     </p>
     <p>
         <button type="submit">Login</button>
+        <a href="/register">Register here</a>
     </p>
 </form>
 <h2>
     {{currentDate.date}}
 </h2>
+
+{{#if invalid}}
+    <b style="color: red">Invalid username or password</b>
+{{/if}}
