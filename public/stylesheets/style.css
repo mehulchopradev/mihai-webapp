@@ -1,0 +1,13 @@
+header, footer, article {
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+}
+
+footer {
+  padding: 10px;
+  position: fixed;
+  bottom: 0px;
+}
