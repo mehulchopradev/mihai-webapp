@@ -40,6 +40,22 @@ class UserDao {
             });
         });
     }
+
+    async getUserByUsername(username) {
+        const connection = await getConnection();
+        const query = 'select * from users where username = ?';
+        return new Promise((resolve, reject) => {
+            connection.query(query, [username], (err, results, fields) => {
+                connection.destroy();
+                if (err) {
+                    console.log(err);
+                    reject(err);
+                } else {
+                    resolve(results.length ? results[0] : null);
+                }
+            });
+        });
+    }
 }
 
 module.exports = UserDao;

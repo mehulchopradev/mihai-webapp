@@ -11,3 +11,9 @@ exports.authenticate = async function ({ username, password }) {
     const user = await userDao.getUserByUsernameAndPassword(username, password);
     return user;
 }
+
+exports.getUserByUsername = async function (username) {
+    const userDao = new UserDao();
+    const user = await userDao.getUserByUsername(username);
+    return user;
+}

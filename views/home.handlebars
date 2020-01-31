@@ -1,18 +1,22 @@
+Welcome {{username}}
 <table border="1">
     <thead>
         <tr>
             <th>Title</th>
             <th>Pages</th>
             <th>Price</th>
+            <th>No of Copies</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="tablebody">
         {{#each books as |book|}}
             <tr>
                 <td>{{book.title}}</td>
                 <td>{{book.pages}}</td>
                 <td>{{book.price}}</td>
+                <td>{{book.no_of_copies}}</td>
             </tr>
         {{/each}}
     </tbody>
 </table>
+<script src="/js/home.js"></script>
